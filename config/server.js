@@ -3,7 +3,7 @@ module.exports = ({ env }) => ({
   port: env.int('PORT', 1337),
   app: {
     keys: env.array('APP_KEYS',
-    ['qJPWGKV5mkk2styZWNAXJg==','djzMXMF5YwbrFelUUi/y5Q==','fRzhVGN9sblicSwsnBtH0A==','h8ZdFSPwYExojCWgBpFo7g==','1wLJe1a/DT0jc5GcBwl+8EYXhwmdgXIIi+bR+c4MeyQ=']
+    ['qJPWGKV5mkk2styZWNAXJg==','djzMXMF5YwbrFelUUi/y5Q==','fRzhVGN9sblicSwsnBtH0A==','h8ZdFSPwYExojCWgBpFo7g==']
     ),
   },
 });
