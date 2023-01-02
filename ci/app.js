@@ -41,7 +41,6 @@ function pullNewCode(type) {
         console.log(error);
     }
 
-    //shell.cd("backend");
     shell.exec("rm -rf node_modules build");
     shell.exec("npm i");
     shell.exec("npm run build");
