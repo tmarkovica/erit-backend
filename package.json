@@ -7,7 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "deploy": "node ./ci/script.js"
   },
   "dependencies": {
     "@strapi/plugin-i18n": "4.5.5",
