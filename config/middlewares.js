@@ -39,25 +39,20 @@ module.exports = [
   },
 ]; */
 
-// https://github.com/strapi/strapi/issues/11637#issuecomment-977244572
-module.exports = ({ env }) => [
-  'strapi::errors',
+// https://github.com/strapi/strapi/issues/11637#issuecomment-1134444328
+module.exports = [
   {
     name: 'strapi::security',
     config: {
       contentSecurityPolicy: {
+        useDefaults: true,
         directives: {
-          'script-src': ["'self'", "'unsafe-inline'", 'cdn.jsdelivr.net'],
-          'img-src': ["'self'", 'data:', 'cdn.jsdelivr.net', 'strapi.io', `${env('AWS_BUCKET')}.s3.${env('AWS_REGION')}.amazonaws.com`],
+          'connect-src': ["'self'", 'http:'],
+          'img-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          'media-src': ["'self'", 'data:', 'blob:', 'res.cloudinary.com'],
+          upgradeInsecureRequests: null,
         },
-      }
+      },
     },
   },
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::logger',
-  'strapi::query',
-  'strapi::body',
-  'strapi::favicon',
-  'strapi::public',
 ];
