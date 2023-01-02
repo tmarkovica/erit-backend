@@ -43,15 +43,19 @@
     "editor": {
       "type": "richtext"
     },
-    "approved": {
-      "type": "boolean",
-      "default": false
-    },
     "approval": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::approval.approval",
       "inversedBy": "content"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "novi": {
+      "type": "json",
+      "private": true
     }
   }
 }

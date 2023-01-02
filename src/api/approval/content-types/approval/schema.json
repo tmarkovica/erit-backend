@@ -20,7 +20,7 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::content.content",
-      "inversedBy": "approval"
+      "mappedBy": "approval"
     }
   }
 }
