@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.post("/", async function (req, res) {
     const { secret, type } = req.body;
-    if (secret !== "3IPjNG9ucV41Nd9918") {
+    if (secret !== "W7U4X-6TUWX-RCJWQ") {
         return res.status(403).send();
     }
     res.send("ok");
